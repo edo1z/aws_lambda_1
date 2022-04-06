@@ -27,7 +27,7 @@ def handler(event, context):
         'delete': lambda x: dynamo.delete_item(**x),
         'list': lambda x: dynamo.scan(**x),
         'echo': lambda x: x,
-        'ping': lambda x: 'pong'
+        'ping': lambda x: 'pong2'
     }
 
     if operation in operations:

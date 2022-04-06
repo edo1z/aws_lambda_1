@@ -89,12 +89,21 @@ docker push ${ECR_URI}/${REPO_NAME}:${TAG_NAME}
 ```
 
 ### デプロイ
+#### 関数の新規作成
 
 ```shell
 aws lambda create-function --region ${REGION} --function-name ${FUNCTION_NAME} \
   --package-type Image \
   --code ImageUri=${ECR_URI}/${REPO_NAME}:${TAG_NAME} \
   --role ${ROLE_ARN}
+```
+
+#### 関数のアップデート
+
+```shell
+aws lambda update-function-code --region ${REGION} \
+  --function-name ${FUNCTION_NAME} \
+  --image-uri ${ECR_URI}/${REPO_NAME}:${TAG_NAME}
 ```
 
 ## ローカル環境でのテスト
