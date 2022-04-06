@@ -1,0 +1,1 @@
+docker push ${ECR_URI}/${REPO_NAME}:${TAG_NAME}

@@ -1,0 +1,1 @@
+docker tag ${REPO_NAME}:${TAG_NAME} ${ECR_URI}/${REPO_NAME}:${TAG_NAME}

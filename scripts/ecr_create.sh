@@ -1,0 +1,1 @@
+aws ecr create-repository --region ${REGION} --repository-name ${REPO_NAME} --image-scanning-configuration scanOnPush=true --image-tag-mutability MUTABLE
