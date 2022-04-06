@@ -1,0 +1,1 @@
+docker run -p 9000:8080 ${REPO_NAME}:${TAG_NAME}
